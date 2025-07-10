@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Illinois Web Components Toolkit Colors</title>
+
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
+    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-tooltip/1.0.0-alpha/ilw-tooltip.css">
+    <script type="module" src="https://dev.toolkit.illinois.edu/ilw-tooltip/1.0.0-alpha/ilw-tooltip.js"></script>
+    <style id="palette-style">
+        :root {
+            /* Illinois Color Palette */
+            --il-orange-40: #a72f10;
+            --il-blue-30: #2f4668;
+            --il-blue-50: #4877b8;
+            --il-blue-70: #98afd2;
+            --il-blue-90: #e1e7f1;
+            --il-blue-15: #000333;
+            --il-blue-10: #11181d;
+            --il-storm-60: #8e9090;
+            --il-storm-70: #AAABAB;
+            --il-storm-80: #C6C7C6;
+            --il-storm-95: #F4F4F4;
+            --il-storm-30: #474948;
+            --il-storm-10: #252525;
+            --il-arches-70: #55b6d4;
+            --il-arches-80: #8dd1eb;
+            --il-arches-90: #c7edf8;
+            --il-arches-95: #e9f6fb;
+            --il-arches-50: #277cab;
+            --il-arches-60: #196389;
+        }
+
+        /* Minimal base styles for layout */
+        body {
+            font-family: var(--il-font-sans);
+            margin: 0;
+            padding: 2rem;
+            color: #252525;
+            background: var(--il-storm-95);
+        }
+
+        h1 {
+            color: var(--il-blue);
+            margin-bottom: 2rem;
+        }
+
+        /* Illinois palette swatch styles */
+        .palette-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.5rem 2.2rem;
+            align-items: center;
+        }
+
+        .palette-sample-row {
+            background: #fff;
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .palette-swatch {
+            width: 120px;
+            height: 48px;
+            border-radius: 0.4rem;
+            border: 2px solid #eee;
+            margin-bottom: 0.2rem;
+            box-shadow: 0 1px 4px #0001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .palette-name {
+            color: var(--il-storm-30);
+            margin-top: 0.1rem;
+            text-align: left;
+        }
+
+        .palette-sample {
+            display: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            border-radius: 0.2em;
+            margin-right: 0.4em;
+            border: 1px solid #ccc;
+        }
+
+        /* Semantic color swatch styles */
+        #semantic-colors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 0.5rem 2.2rem;
+        }
+
+        .semantic-list {
+            padding: 1rem;
+            background: #fff;
+        }
+
+        .semantic-sample-row {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+            gap: 1rem;
+        }
+
+        .swatch {
+            width: 120px;
+            height: 48px;
+            border-radius: 0.4rem;
+            border: 2px solid #eee;
+            box-shadow: 0 1px 4px #0001;
+            flex-shrink: 0;
+        }
+
+        .semantic-name {
+            font-weight: 400;
+            flex: 1 1 auto;
+            min-width: 0;
+            word-break: break-all;
+            cursor: pointer;
+        }
+
+        .semantic-name:focus {
+            background: var(--il-arches-90);
+        }
+
+        .semantic-name:hover {
+            text-decoration: underline;
+        }
+
+        .value {
+            font-size: 0.92em;
+            color: #888;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Illinois Web Components Toolkit Colors</h1>
+<div id="semantic-colors"></div>
+
+<h2>Illinois Color Palette</h2>
+<div class="palette-list"></div>
+
+<script>
+    // Semantic color definitions as JSON, grouped by theme
+    const semanticColorGroups = [
+        {
+            group: 'Default',
+            colors: [
+                {name: '--ilw-color--background', value: '#ffffff'},
+                {name: '--ilw-color--text', value: 'var(--il-storm-10)'},
+                {name: '--ilw-color--link', value: 'var(--il-industrial)'},
+                {name: '--ilw-color--link--hover', value: 'var(--il-altgeld)'},
+                {name: '--ilw-color--heading', value: 'var(--il-blue)'},
+                {name: '--ilw-color--heading--link', value: 'var(--il-blue)'},
+                {name: '--ilw-color--heading--link--hover', value: 'var(--il-altgeld)'},
+            ]
+        },
+        {
+            group: 'Focus',
+            colors: [
+                {name: '--ilw-color--focus--background', value: 'var(--il-arches-90)'},
+                {name: '--ilw-color--focus--text', value: 'var(--il-blue)'},
+                {name: '--ilw-color--focus--outline', value: 'var(--il-blue)'},
+            ]
+        },
+        {
+            group: 'Blue',
+            colors: [
+                {name: '--ilw-color--blue--background', value: 'var(--il-blue)'},
+                {name: '--ilw-color--blue--text', value: '#ffffff'},
+                {name: '--ilw-color--blue--link', value: '#ffffff'},
+                {name: '--ilw-color--blue--link--hover', value: 'var(--il-orange)'},
+                {name: '--ilw-color--blue--heading', value: '#ffffff'},
+                {name: '--ilw-color--blue--heading--link', value: '#ffffff'},
+                {name: '--ilw-color--blue--heading--link--hover', value: 'var(--il-orange)'},
+            ]
+        },
+        {
+            group: 'Gray',
+            colors: [
+                {name: '--ilw-color--gray--background', value: 'var(--il-storm-95)'},
+                {name: '--ilw-color--gray--text', value: 'var(--il-storm-10)'},
+                {name: '--ilw-color--gray--link', value: 'var(--il-industrial)'},
+                {name: '--ilw-color--gray--link--hover', value: 'var(--il-altgeld)'},
+                {name: '--ilw-color--gray--heading', value: 'var(--il-blue)'},
+                {name: '--ilw-color--gray--heading--link', value: 'var(--il-blue)'},
+                {name: '--ilw-color--gray--heading--link--hover', value: 'var(--il-altgeld)'},
+            ]
+        },
+        {
+            group: 'Blue Gradient',
+            colors: [
+                {
+                    name: '--ilw-color--bluegrad--background',
+                    value: ' linear-gradient(135deg, #1D58A7 0%, #13294B 100%)'
+                },
+                {name: '--ilw-color--bluegrad--text', value: '#ffffff'},
+                {name: '--ilw-color--bluegrad--link', value: '#ffffff'},
+                {name: '--ilw-color--bluegrad--link--hover', value: 'var(--il-arches-90)'},
+                {name: '--ilw-color--bluegrad--heading', value: '#ffffff'},
+                {name: '--ilw-color--bluegrad--heading--link', value: '#ffffff'},
+                {name: '--ilw-color--bluegrad--heading--link--hover', value: 'var(--il-arches-90)'},
+            ]
+        },
+        {
+            group: 'Orange',
+            colors: [
+                {name: '--ilw-color--orange--background', value: 'var(--il-orange)'},
+                {name: '--ilw-color--orange--text', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orange--link', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orange--link--hover', value: '#000000'},
+                {name: '--ilw-color--orange--heading', value: '#ffffff'},
+                {name: '--ilw-color--orange--heading--link', value: '#ffffff'},
+                {name: '--ilw-color--orange--heading--link--hover', value: 'var(--il-blue)'},
+            ]
+        },
+        {
+            group: 'Orange Gradient',
+            colors: [
+                {
+                    name: '--ilw-color--orangegrad--background',
+                    value: 'linear-gradient(135deg, #FCB316 0%, #FD890E 18.89%, #FF5F05 80.81%)'
+                },
+                {name: '--ilw-color--orangegrad--text', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orangegrad--link', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orangegrad--link--hover', value: '#000000'},
+                {name: '--ilw-color--orangegrad--heading', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orangegrad--heading--link', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orangegrad--heading--link--hover', value: '#000000'},
+            ]
+        },
+    ];
+
+    // Dynamically generate semantic color CSS variables
+    let semanticCSS = ':root {\n';
+    semanticColorGroups.forEach(group => {
+        group.colors.forEach(c => {
+            semanticCSS += `  ${c.name}: ${c.value};\n`;
+        });
+    });
+    semanticCSS += '}';
+    const style = document.createElement('style');
+    style.id = 'semantic-style';
+    style.textContent = semanticCSS;
+    document.head.appendChild(style);
+
+    // Render semantic color swatches grouped by theme
+    const container = document.getElementById('semantic-colors');
+    semanticColorGroups.forEach(group => {
+        const groupDiv = document.createElement('div');
+        const groupTitle = document.createElement('h2');
+        groupTitle.textContent = group.group;
+        groupDiv.appendChild(groupTitle);
+        // Use ul/li for accessibility
+        const swatchList = document.createElement('ul');
+        swatchList.className = 'semantic-list';
+        group.colors.forEach(c => {
+            const li = document.createElement('li');
+            li.className = 'semantic-sample-row';
+            // Use ilw-tooltip for clipboard notice
+            li.innerHTML = `
+          <div class="swatch" style="background: ${c.value};"></div>
+          <ilw-tooltip>
+            <span class="semantic-name" slot="trigger" tabindex="0" role="button" title="Copy variable name">${c.name}<br><span class="value">${c.value}</span></span>
+            <span slot="content" class="clipboard-tooltip">Copy</span>
+          </ilw-tooltip>
+        `;
+            // Add click-to-copy functionality
+            const tooltip = li.querySelector('ilw-tooltip');
+            const nameDiv = tooltip.querySelector('.semantic-name');
+            const tooltipContent = tooltip.querySelector('.clipboard-tooltip');
+            nameDiv.addEventListener('click', function (e) {
+                navigator.clipboard.writeText(c.name);
+                tooltipContent.textContent = 'Copied!';
+                setTimeout(() => {
+                    tooltipContent.textContent = 'Copy';
+                }, 5000);
+            });
+            nameDiv.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    nameDiv.click();
+                }
+            });
+            swatchList.appendChild(li);
+        });
+        groupDiv.appendChild(swatchList);
+        container.appendChild(groupDiv);
+    });
+
+    // Illinois Color Palette as JSON
+    const illinoisPalette = [
+        {name: '--il-orange', value: '#ff5f05', text: '#fff'},
+        {name: '--il-altgeld', value: '#c84113', text: '#fff'},
+        {name: '--il-orange-40', value: '#a72f10', text: '#fff'},
+        {name: '--il-blue', value: '#13294b', text: '#fff'},
+        {name: '--il-blue-30', value: '#2f4668', text: '#fff'},
+        {name: '--il-blue-50', value: '#4877b8', text: '#fff'},
+        {name: '--il-blue-70', value: '#98afd2', text: '#fff'},
+        {name: '--il-blue-90', value: '#e1e7f1', text: '#11181d'},
+        {name: '--il-blue-15', value: '#000333', text: '#fff'},
+        {name: '--il-blue-10', value: '#11181d', text: '#fff'},
+        {name: '--il-storm', value: '#707372', text: '#fff'},
+        {name: '--il-storm-60', value: '#8e9090', text: '#fff'},
+        {name: '--il-storm-70', value: '#AAABAB', text: '#fff'},
+        {name: '--il-storm-80', value: '#C6C7C6', text: '#11181d'},
+        {name: '--il-storm-95', value: '#F4F4F4', text: '#11181d'},
+        {name: '--il-storm-30', value: '#474948', text: '#fff'},
+        {name: '--il-storm-10', value: '#252525', text: '#fff'},
+        {name: '--il-industrial', value: '#1d58a7', text: '#fff'},
+        {name: '--il-arches', value: '#009fd4', text: '#fff'},
+        {name: '--il-arches-70', value: '#55b6d4', text: '#fff'},
+        {name: '--il-arches-80', value: '#8dd1eb', text: '#11181d'},
+        {name: '--il-arches-90', value: '#c7edf8', text: '#11181d'},
+        {name: '--il-arches-95', value: '#e9f6fb', text: '#11181d'},
+        {name: '--il-arches-50', value: '#277cab', text: '#fff'},
+        {name: '--il-arches-60', value: '#196389', text: '#fff'},
+        {name: '--il-harvest', value: '#FCB316', text: '#11181d'},
+        {name: '--il-prairie', value: '#006230', text: '#fff'},
+        {name: '--il-patina', value: '#007E8E', text: '#fff'},
+        {name: '--il-berry', value: '#5C0E41', text: '#fff'},
+        {name: '--il-earth', value: '#7D3E13', text: '#fff'}
+    ];
+
+    // Render Illinois Color Palette dynamically
+    const paletteList = document.querySelector('.palette-list');
+    paletteList.innerHTML = '';
+    illinoisPalette.forEach(color => {
+        const row = document.createElement('div');
+        row.className = 'palette-sample-row';
+        row.innerHTML = `
+        <div class="palette-swatch" style="background: ${color.value}; color: ${color.text};">${color.name}</div>
+        <div class="palette-name">${color.value}</div>
+      `;
+        paletteList.appendChild(row);
+    });
+</script>
+</body>
+</html>
