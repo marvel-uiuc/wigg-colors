@@ -129,10 +129,12 @@
             min-width: 0;
             word-break: break-all;
             cursor: pointer;
+            color: #000;
         }
 
         .semantic-name:focus {
             background: var(--il-arches-90);
+            color: var(--il-blue);
         }
 
         .semantic-name:hover {
@@ -141,19 +143,114 @@
 
         .value {
             font-size: 0.92em;
-            color: #888;
+            color: #666;
             font-weight: 400;
+        }
+
+        .semantic-name:focus .value {
+            color: var(--il-blue);
+        }
+
+        .intro-box {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .naming-demo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5em;
+            flex-wrap: wrap;
+        }
+
+        .naming-box {
+            display: inline-block;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 0.2em 0.7em;
+            background: #f7f7f7;
+            font-family: monospace;
+            font-size: 1em;
+        }
+
+        .naming-sep {
+            font-size: 1.2em;
+            color: #888;
+        }
+
+        .naming-arrow {
+            margin-left: 1em;
+            font-family: monospace;
+            color: #888;
+        }
+
+        .naming-final {
+            color: #222;
+        }
+
+        .naming-example {
+            margin-top: 0.5em;
+            color: #666;
+            font-size: 0.98em;
         }
     </style>
 </head>
 <body>
-
-<h1>Illinois Web Components Toolkit Colors</h1>
+<header class="intro-box">
+    <h1>Illinois Web Components Toolkit Colors</h1>
+    <h2>Intro</h2>
+    <p class="intro">
+        This page showcases the Illinois Web Components Toolkit's semantic color variables and the Illinois color
+        palette.
+        The semantic colors are designed to be used across components, while the Illinois palette provides a set of
+        standardized colors for branding and design consistency.
+    </p>
+    <h3>Naming and grouping</h3>
+    <p>
+        Here is the naming convention for semantic colors.
+    </p>
+    <p>
+        <span class="naming-demo">
+            <span class="naming-box">--ilw-color</span>
+            <span class="naming-sep">/</span>
+            <span class="naming-box">--group--</span>
+            <span class="naming-sep">/</span>
+            <span class="naming-box">semantic-name</span>
+        </span>
+    </p>
+    <p class="naming-example">
+        <strong>Example:</strong>
+        <span class="naming-demo">
+            <span class="naming-box">--ilw-color</span>
+            <span class="naming-sep">/</span>
+            <span class="naming-box">--blue--</span>
+            <span class="naming-sep">/</span>
+            <span class="naming-box">background</span>
+        </span>
+        <span class="naming-arrow">→ <span class="naming-final">--ilw-color--blue--background</span></span>
+    </p>
+    <p class="naming-example">
+        <strong>Default group:</strong>
+        <span class="naming-demo">
+            <span class="naming-box">--ilw-color</span>
+            <span class="naming-sep">/</span>
+            <span class="naming-box">background</span>
+        </span>
+        <span class="naming-arrow">→ <span class="naming-final">--ilw-color--background</span></span>
+    </p>
+</header>
+<main>
+<h2>Semantic Colors</h2>
 <div id="semantic-colors"></div>
 
 <h2>Illinois Color Palette</h2>
 <div class="palette-list"></div>
 
+</main>
 <script>
     // Semantic color definitions as JSON, grouped by theme
     const semanticColorGroups = [
@@ -163,10 +260,10 @@
                 {name: '--ilw-color--background', value: '#ffffff'},
                 {name: '--ilw-color--text', value: 'var(--il-storm-10)'},
                 {name: '--ilw-color--link', value: 'var(--il-industrial)'},
-                {name: '--ilw-color--link--hover', value: 'var(--il-altgeld)'},
+                {name: '--ilw-color--link-hover', value: 'var(--il-altgeld)'},
                 {name: '--ilw-color--heading', value: 'var(--il-blue)'},
-                {name: '--ilw-color--heading--link', value: 'var(--il-blue)'},
-                {name: '--ilw-color--heading--link--hover', value: 'var(--il-altgeld)'},
+                {name: '--ilw-color--heading-link', value: 'var(--il-blue)'},
+                {name: '--ilw-color--heading-link-hover', value: 'var(--il-altgeld)'},
             ]
         },
         {
@@ -183,10 +280,10 @@
                 {name: '--ilw-color--blue--background', value: 'var(--il-blue)'},
                 {name: '--ilw-color--blue--text', value: '#ffffff'},
                 {name: '--ilw-color--blue--link', value: '#ffffff'},
-                {name: '--ilw-color--blue--link--hover', value: 'var(--il-orange)'},
+                {name: '--ilw-color--blue--link-hover', value: 'var(--il-orange)'},
                 {name: '--ilw-color--blue--heading', value: '#ffffff'},
-                {name: '--ilw-color--blue--heading--link', value: '#ffffff'},
-                {name: '--ilw-color--blue--heading--link--hover', value: 'var(--il-orange)'},
+                {name: '--ilw-color--blue--heading-link', value: '#ffffff'},
+                {name: '--ilw-color--blue--heading-link-hover', value: 'var(--il-orange)'},
             ]
         },
         {
@@ -195,10 +292,10 @@
                 {name: '--ilw-color--gray--background', value: 'var(--il-storm-95)'},
                 {name: '--ilw-color--gray--text', value: 'var(--il-storm-10)'},
                 {name: '--ilw-color--gray--link', value: 'var(--il-industrial)'},
-                {name: '--ilw-color--gray--link--hover', value: 'var(--il-altgeld)'},
+                {name: '--ilw-color--gray--link-hover', value: 'var(--il-altgeld)'},
                 {name: '--ilw-color--gray--heading', value: 'var(--il-blue)'},
-                {name: '--ilw-color--gray--heading--link', value: 'var(--il-blue)'},
-                {name: '--ilw-color--gray--heading--link--hover', value: 'var(--il-altgeld)'},
+                {name: '--ilw-color--gray--heading-link', value: 'var(--il-blue)'},
+                {name: '--ilw-color--gray--heading-link-hover', value: 'var(--il-altgeld)'},
             ]
         },
         {
@@ -210,10 +307,10 @@
                 },
                 {name: '--ilw-color--bluegrad--text', value: '#ffffff'},
                 {name: '--ilw-color--bluegrad--link', value: '#ffffff'},
-                {name: '--ilw-color--bluegrad--link--hover', value: 'var(--il-arches-90)'},
+                {name: '--ilw-color--bluegrad--link-hover', value: 'var(--il-arches-90)'},
                 {name: '--ilw-color--bluegrad--heading', value: '#ffffff'},
-                {name: '--ilw-color--bluegrad--heading--link', value: '#ffffff'},
-                {name: '--ilw-color--bluegrad--heading--link--hover', value: 'var(--il-arches-90)'},
+                {name: '--ilw-color--bluegrad--heading-link', value: '#ffffff'},
+                {name: '--ilw-color--bluegrad--heading-link-hover', value: 'var(--il-arches-90)'},
             ]
         },
         {
@@ -222,10 +319,10 @@
                 {name: '--ilw-color--orange--background', value: 'var(--il-orange)'},
                 {name: '--ilw-color--orange--text', value: 'var(--il-blue)'},
                 {name: '--ilw-color--orange--link', value: 'var(--il-blue)'},
-                {name: '--ilw-color--orange--link--hover', value: '#000000'},
+                {name: '--ilw-color--orange--link-hover', value: '#000000'},
                 {name: '--ilw-color--orange--heading', value: '#ffffff'},
-                {name: '--ilw-color--orange--heading--link', value: '#ffffff'},
-                {name: '--ilw-color--orange--heading--link--hover', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orange--heading-link', value: '#ffffff'},
+                {name: '--ilw-color--orange--heading-link-hover', value: 'var(--il-blue)'},
             ]
         },
         {
@@ -237,10 +334,10 @@
                 },
                 {name: '--ilw-color--orangegrad--text', value: 'var(--il-blue)'},
                 {name: '--ilw-color--orangegrad--link', value: 'var(--il-blue)'},
-                {name: '--ilw-color--orangegrad--link--hover', value: '#000000'},
+                {name: '--ilw-color--orangegrad--link-hover', value: '#000000'},
                 {name: '--ilw-color--orangegrad--heading', value: 'var(--il-blue)'},
-                {name: '--ilw-color--orangegrad--heading--link', value: 'var(--il-blue)'},
-                {name: '--ilw-color--orangegrad--heading--link--hover', value: '#000000'},
+                {name: '--ilw-color--orangegrad--heading-link', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orangegrad--heading-link-hover', value: '#000000'},
             ]
         },
     ];
@@ -262,7 +359,7 @@
     const container = document.getElementById('semantic-colors');
     semanticColorGroups.forEach(group => {
         const groupDiv = document.createElement('div');
-        const groupTitle = document.createElement('h2');
+        const groupTitle = document.createElement('h3');
         groupTitle.textContent = group.group;
         groupDiv.appendChild(groupTitle);
         // Use ul/li for accessibility
@@ -303,26 +400,26 @@
 
     // Illinois Color Palette as JSON
     const illinoisPalette = [
-        {name: '--il-orange', value: '#ff5f05', text: '#fff'},
+        {name: '--il-orange', value: '#ff5f05', text: '#000'},
         {name: '--il-altgeld', value: '#c84113', text: '#fff'},
         {name: '--il-orange-40', value: '#a72f10', text: '#fff'},
         {name: '--il-blue', value: '#13294b', text: '#fff'},
         {name: '--il-blue-30', value: '#2f4668', text: '#fff'},
         {name: '--il-blue-50', value: '#4877b8', text: '#fff'},
-        {name: '--il-blue-70', value: '#98afd2', text: '#fff'},
+        {name: '--il-blue-70', value: '#98afd2', text: '#000'},
         {name: '--il-blue-90', value: '#e1e7f1', text: '#11181d'},
         {name: '--il-blue-15', value: '#000333', text: '#fff'},
         {name: '--il-blue-10', value: '#11181d', text: '#fff'},
         {name: '--il-storm', value: '#707372', text: '#fff'},
-        {name: '--il-storm-60', value: '#8e9090', text: '#fff'},
-        {name: '--il-storm-70', value: '#AAABAB', text: '#fff'},
+        {name: '--il-storm-60', value: '#8e9090', text: '#000'},
+        {name: '--il-storm-70', value: '#AAABAB', text: '#000'},
         {name: '--il-storm-80', value: '#C6C7C6', text: '#11181d'},
         {name: '--il-storm-95', value: '#F4F4F4', text: '#11181d'},
         {name: '--il-storm-30', value: '#474948', text: '#fff'},
         {name: '--il-storm-10', value: '#252525', text: '#fff'},
         {name: '--il-industrial', value: '#1d58a7', text: '#fff'},
-        {name: '--il-arches', value: '#009fd4', text: '#fff'},
-        {name: '--il-arches-70', value: '#55b6d4', text: '#fff'},
+        {name: '--il-arches', value: '#009fd4', text: '#000'},
+        {name: '--il-arches-70', value: '#55b6d4', text: '#000'},
         {name: '--il-arches-80', value: '#8dd1eb', text: '#11181d'},
         {name: '--il-arches-90', value: '#c7edf8', text: '#11181d'},
         {name: '--il-arches-95', value: '#e9f6fb', text: '#11181d'},
