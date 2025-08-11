@@ -302,7 +302,7 @@
             --ilw-color--control-accent: var(--ilw-color--gray--control-accent);
             --ilw-color--control-accent-text: var(--ilw-color--gray--control-accent-text);
         }
-        [theme="bluegrad"] {
+        [theme="blue-gradient"] {
             --ilw-color--background: var(--ilw-color--bluegrad--background);
             --ilw-color--text: var(--ilw-color--bluegrad--text);
             --ilw-color--link: var(--ilw-color--bluegrad--link);
@@ -328,7 +328,7 @@
             --ilw-color--control-accent: var(--ilw-color--orange--control-accent);
             --ilw-color--control-accent-text: var(--ilw-color--orange--control-accent-text);
         }
-        [theme="orangegrad"] {
+        [theme="orange-gradient"] {
             --ilw-color--background: var(--ilw-color--orangegrad--background);
             --ilw-color--text: var(--ilw-color--orangegrad--text);
             --ilw-color--link: var(--ilw-color--orangegrad--link);
@@ -409,9 +409,9 @@
             <label><input type="radio" name="theme-group" value="default" checked> Default</label>
             <label><input type="radio" name="theme-group" value="blue"> Blue</label>
             <label><input type="radio" name="theme-group" value="gray"> Gray</label>
-            <label><input type="radio" name="theme-group" value="bluegrad"> Blue Gradient</label>
+            <label><input type="radio" name="theme-group" value="blue-gradient"> Blue Gradient</label>
             <label><input type="radio" name="theme-group" value="orange"> Orange</label>
-            <label><input type="radio" name="theme-group" value="orangegrad"> Orange Gradient</label>
+            <label><input type="radio" name="theme-group" value="orange-gradient"> Orange Gradient</label>
         </fieldset>
     </div>
 </header>
@@ -648,14 +648,6 @@
         radio.addEventListener('change', function () {
             const theme = this.value;
             themeDemo.setAttribute('theme', theme);
-            // Update demo box styles based on selected theme
-            if (theme === 'default') {
-                themeDemo.style.background = 'var(--ilw-color--background)';
-                themeDemo.style.color = 'var(--ilw-color--text)';
-            } else {
-                themeDemo.style.background = `var(--ilw-color--${theme}--background)`;
-                themeDemo.style.color = `var(--ilw-color--${theme}--text)`;
-            }
         });
     });
 </script>
