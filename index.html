@@ -49,7 +49,7 @@
         .palette-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 0.5rem 2.2rem;
+            gap: 0.5rem;
             align-items: center;
         }
 
@@ -67,7 +67,6 @@
             height: 48px;
             border-radius: 0.4rem;
             border: 2px solid #eee;
-            margin-bottom: 0.2rem;
             box-shadow: 0 1px 4px #0001;
             display: flex;
             align-items: center;
@@ -105,7 +104,7 @@
         }
 
         .semantic-sample-row {
-            padding: 0.5rem;
+            padding: 0.2rem;
             display: flex;
             align-items: center;
             width: 100%;
@@ -197,6 +196,151 @@
             color: #666;
             font-size: 0.98em;
         }
+
+        /* Theme demo styles */
+        #theme-demo-container {
+            margin-top: 2rem;
+        }
+
+        #theme-demo {
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #0002;
+            background: var(--ilw-color--background);
+            color: var(--ilw-color--text);
+        }
+
+        #theme-demo h2 {
+            margin-top: 0;
+            color: var(--ilw-color--heading);
+        }
+
+        #theme-demo h3 {
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
+        }
+        #theme-demo h3 a {
+            color: var(--ilw-color--heading-link);
+        }
+        #theme-demo h3 a:hover {
+            color: var(--ilw-color--heading-link-hover);
+        }
+
+        #theme-demo a {
+            color: var(--ilw-color--link);
+            text-decoration: underline;
+        }
+        #theme-demo a:hover {
+            color: var(--ilw-color--link-hover);
+        }
+
+        #theme-demo button {
+            background: var(--ilw-color--control);
+            color: var(--ilw-color--control-text);
+            border: 2px solid var(--ilw-color--control-text);
+            border-radius: 4px;
+            cursor: pointer;
+            font: 700 1.188rem / 1.25rem var(--il-font-sans);
+            margin: 6px 0px;
+            padding: 12px 20px;
+        }
+        #theme-demo button:hover {
+            background: var(--ilw-color--control-text);
+            color: var(--ilw-color--control);
+            border-color: var(--ilw-color--control-text);
+            text-decoration: underline;
+        }
+        #theme-demo button:active {
+            background: var(--ilw-color--control-accent);
+            color: var(--ilw-color--control-accent-text);
+        }
+
+        #theme-radio-group {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1.5em;
+            align-items: center;
+        }
+
+        #theme-radio-group label {
+            cursor: pointer;
+        }
+
+        #theme-demo * a:focus-visible {
+            background: var(--ilw-color--focus--background);
+            color: var(--ilw-color--focus--text);
+        }
+        #theme-demo button:focus-visible {
+            background: var(--ilw-color--focus--background);
+            color: var(--ilw-color--focus--text);
+        }
+    </style>
+    <style id="group-themes">
+        [theme="blue"] {
+            --ilw-color--background: var(--ilw-color--blue--background);
+            --ilw-color--text: var(--ilw-color--blue--text);
+            --ilw-color--link: var(--ilw-color--blue--link);
+            --ilw-color--link-hover: var(--ilw-color--blue--link-hover);
+            --ilw-color--heading: var(--ilw-color--blue--heading);
+            --ilw-color--heading-link: var(--ilw-color--blue--heading-link);
+            --ilw-color--heading-link-hover: var(--ilw-color--blue--heading-link-hover);
+            --ilw-color--control: var(--ilw-color--blue--control);
+            --ilw-color--control-text: var(--ilw-color--blue--control-text);
+            --ilw-color--control-accent: var(--ilw-color--blue--control-accent);
+            --ilw-color--control-accent-text: var(--ilw-color--blue--control-accent-text);
+        }
+        [theme="gray"] {
+            --ilw-color--background: var(--ilw-color--gray--background);
+            --ilw-color--text: var(--ilw-color--gray--text);
+            --ilw-color--link: var(--ilw-color--gray--link);
+            --ilw-color--link-hover: var(--ilw-color--gray--link-hover);
+            --ilw-color--heading: var(--ilw-color--gray--heading);
+            --ilw-color--heading-link: var(--ilw-color--gray--heading-link);
+            --ilw-color--heading-link-hover: var(--ilw-color--gray--heading-link-hover);
+            --ilw-color--control: var(--ilw-color--gray--control);
+            --ilw-color--control-text: var(--ilw-color--gray--control-text);
+            --ilw-color--control-accent: var(--ilw-color--gray--control-accent);
+            --ilw-color--control-accent-text: var(--ilw-color--gray--control-accent-text);
+        }
+        [theme="bluegrad"] {
+            --ilw-color--background: var(--ilw-color--bluegrad--background);
+            --ilw-color--text: var(--ilw-color--bluegrad--text);
+            --ilw-color--link: var(--ilw-color--bluegrad--link);
+            --ilw-color--link-hover: var(--ilw-color--bluegrad--link-hover);
+            --ilw-color--heading: var(--ilw-color--bluegrad--heading);
+            --ilw-color--heading-link: var(--ilw-color--bluegrad--heading-link);
+            --ilw-color--heading-link-hover: var(--ilw-color--bluegrad--heading-link-hover);
+            --ilw-color--control: var(--ilw-color--bluegrad--control);
+            --ilw-color--control-text: var(--ilw-color--bluegrad--control-text);
+            --ilw-color--control-accent: var(--ilw-color--bluegrad--control-accent);
+            --ilw-color--control-accent-text: var(--ilw-color--bluegrad--control-accent-text);
+        }
+        [theme="orange"] {
+            --ilw-color--background: var(--ilw-color--orange--background);
+            --ilw-color--text: var(--ilw-color--orange--text);
+            --ilw-color--link: var(--ilw-color--orange--link);
+            --ilw-color--link-hover: var(--ilw-color--orange--link-hover);
+            --ilw-color--heading: var(--ilw-color--orange--heading);
+            --ilw-color--heading-link: var(--ilw-color--orange--heading-link);
+            --ilw-color--heading-link-hover: var(--ilw-color--orange--heading-link-hover);
+            --ilw-color--control: var(--ilw-color--orange--control);
+            --ilw-color--control-text: var(--ilw-color--orange--control-text);
+            --ilw-color--control-accent: var(--ilw-color--orange--control-accent);
+            --ilw-color--control-accent-text: var(--ilw-color--orange--control-accent-text);
+        }
+        [theme="orangegrad"] {
+            --ilw-color--background: var(--ilw-color--orangegrad--background);
+            --ilw-color--text: var(--ilw-color--orangegrad--text);
+            --ilw-color--link: var(--ilw-color--orangegrad--link);
+            --ilw-color--link-hover: var(--ilw-color--orangegrad--link-hover);
+            --ilw-color--heading: var(--ilw-color--orangegrad--heading);
+            --ilw-color--heading-link: var(--ilw-color--orangegrad--heading-link);
+            --ilw-color--heading-link-hover: var(--ilw-color--orangegrad--heading-link-hover);
+            --ilw-color--control: var(--ilw-color--orangegrad--control);
+            --ilw-color--control-text: var(--ilw-color--orangegrad--control-text);
+            --ilw-color--control-accent: var(--ilw-color--orangegrad--control-accent);
+            --ilw-color--control-accent-text: var(--ilw-color--orangegrad--control-accent-text);
+        }
     </style>
 </head>
 <body>
@@ -242,13 +386,40 @@
         </span>
         <span class="naming-arrow">→ <span class="naming-final">--ilw-color--background</span></span>
     </p>
+    <h3>Using Groups As Themes</h3>
+    <p>
+        The variables are automatically set to override the defaults based on <span class="naming-box">theme="group"</span> attribute
+        on components.
+    </p>
+    <p>
+        For example, <span class="naming-box">--ilw-color--background</span> will be set to <span class="naming-box">var(--ilw-color--blue--background)</span> when
+        <span class="naming-box">theme="blue"</span> is set on a component.
+    </p>
+    <div id="theme-demo-container">
+        <div id="theme-demo" theme="default">
+            <h2>Sample Heading For Color Groups</h2>
+            <h3>
+                <a href="#">Sample Link Heading</a>
+            </h3>
+            <p>This is some paragraph text. <a href="#">Sample link for link text</a>.</p>
+            <button id="theme-demo-btn">Control Button</button>
+        </div>
+        <fieldset id="theme-radio-group">
+            <legend>Sample Theme Selection</legend>
+            <label><input type="radio" name="theme-group" value="default" checked> Default</label>
+            <label><input type="radio" name="theme-group" value="blue"> Blue</label>
+            <label><input type="radio" name="theme-group" value="gray"> Gray</label>
+            <label><input type="radio" name="theme-group" value="bluegrad"> Blue Gradient</label>
+            <label><input type="radio" name="theme-group" value="orange"> Orange</label>
+            <label><input type="radio" name="theme-group" value="orangegrad"> Orange Gradient</label>
+        </fieldset>
+    </div>
 </header>
 <main>
-<h2>Semantic Colors</h2>
-<div id="semantic-colors"></div>
-
-<h2>Illinois Color Palette</h2>
-<div class="palette-list"></div>
+    <h2>Semantic Colors</h2>
+    <div id="semantic-colors"></div>
+    <h2>Illinois Color Palette</h2>
+    <div class="palette-list"></div>
 
 </main>
 <script>
@@ -264,6 +435,10 @@
                 {name: '--ilw-color--heading', value: 'var(--il-blue)'},
                 {name: '--ilw-color--heading-link', value: 'var(--il-blue)'},
                 {name: '--ilw-color--heading-link-hover', value: 'var(--il-altgeld)'},
+                {name: '--ilw-color--control', value: '#ffffff'},
+                {name: '--ilw-color--control-text', value: 'var(--il-blue)'},
+                {name: '--ilw-color--control-accent', value: 'var(--il-orange)'},
+                {name: '--ilw-color--control-accent-text', value: '#ffffff'},
             ]
         },
         {
@@ -284,6 +459,10 @@
                 {name: '--ilw-color--blue--heading', value: '#ffffff'},
                 {name: '--ilw-color--blue--heading-link', value: '#ffffff'},
                 {name: '--ilw-color--blue--heading-link-hover', value: 'var(--il-orange)'},
+                {name: '--ilw-color--blue--control', value: 'var(--il-blue)'},
+                {name: '--ilw-color--blue--control-text', value: '#ffffff'},
+                {name: '--ilw-color--blue--control-accent', value: 'var(--il-orange)'},
+                {name: '--ilw-color--blue--control-accent-text', value: '#ffffff'},
             ]
         },
         {
@@ -296,6 +475,10 @@
                 {name: '--ilw-color--gray--heading', value: 'var(--il-blue)'},
                 {name: '--ilw-color--gray--heading-link', value: 'var(--il-blue)'},
                 {name: '--ilw-color--gray--heading-link-hover', value: 'var(--il-altgeld)'},
+                {name: '--ilw-color--gray--control', value: '#ffffff'},
+                {name: '--ilw-color--gray--control-text', value: 'var(--il-blue)'},
+                {name: '--ilw-color--gray--control-accent', value: 'var(--il-orange)'},
+                {name: '--ilw-color--gray--control-accent-text', value: '#ffffff'},
             ]
         },
         {
@@ -311,6 +494,10 @@
                 {name: '--ilw-color--bluegrad--heading', value: '#ffffff'},
                 {name: '--ilw-color--bluegrad--heading-link', value: '#ffffff'},
                 {name: '--ilw-color--bluegrad--heading-link-hover', value: 'var(--il-arches-90)'},
+                {name: '--ilw-color--bluegrad--control', value: 'var(--il-blue)'},
+                {name: '--ilw-color--bluegrad--control-text', value: '#ffffff'},
+                {name: '--ilw-color--bluegrad--control-accent', value: 'var(--il-orange)'},
+                {name: '--ilw-color--bluegrad--control-accent-text', value: '#ffffff'},
             ]
         },
         {
@@ -323,6 +510,10 @@
                 {name: '--ilw-color--orange--heading', value: '#ffffff'},
                 {name: '--ilw-color--orange--heading-link', value: '#ffffff'},
                 {name: '--ilw-color--orange--heading-link-hover', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orange--control', value: 'var(--il-orange)'},
+                {name: '--ilw-color--orange--control-text', value: '#ffffff'},
+                {name: '--ilw-color--orange--control-accent', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orange--control-accent-text', value: '#ffffff'},
             ]
         },
         {
@@ -338,6 +529,10 @@
                 {name: '--ilw-color--orangegrad--heading', value: 'var(--il-blue)'},
                 {name: '--ilw-color--orangegrad--heading-link', value: 'var(--il-blue)'},
                 {name: '--ilw-color--orangegrad--heading-link-hover', value: '#000000'},
+                {name: '--ilw-color--orangegrad--control', value: 'var(--il-orange)'},
+                {name: '--ilw-color--orangegrad--control-text', value: '#ffffff'},
+                {name: '--ilw-color--orangegrad--control-accent', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orangegrad--control-accent-text', value: '#ffffff'},
             ]
         },
     ];
@@ -443,6 +638,25 @@
         <div class="palette-name">${color.value}</div>
       `;
         paletteList.appendChild(row);
+    });
+
+    // Theme demo functionality
+    const themeDemo = document.getElementById('theme-demo');
+    const themeRadios = document.querySelectorAll('input[name="theme-group"]');
+
+    themeRadios.forEach(radio => {
+        radio.addEventListener('change', function () {
+            const theme = this.value;
+            themeDemo.setAttribute('theme', theme);
+            // Update demo box styles based on selected theme
+            if (theme === 'default') {
+                themeDemo.style.background = 'var(--ilw-color--background)';
+                themeDemo.style.color = 'var(--ilw-color--text)';
+            } else {
+                themeDemo.style.background = `var(--ilw-color--${theme}--background)`;
+                themeDemo.style.color = `var(--ilw-color--${theme}--text)`;
+            }
+        });
     });
 </script>
 </body>
