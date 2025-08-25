@@ -219,9 +219,11 @@
             margin-bottom: 0.5em;
             font-size: 1.2em;
         }
+
         #theme-demo h3 a {
             color: var(--ilw-color--heading-link);
         }
+
         #theme-demo h3 a:hover {
             color: var(--ilw-color--heading-link-hover);
         }
@@ -230,6 +232,7 @@
             color: var(--ilw-color--link);
             text-decoration: underline;
         }
+
         #theme-demo a:hover {
             color: var(--ilw-color--link-hover);
         }
@@ -244,12 +247,14 @@
             margin: 6px 0px;
             padding: 12px 20px;
         }
+
         #theme-demo button:hover {
             background: var(--ilw-color--control-text);
             color: var(--ilw-color--control);
             border-color: var(--ilw-color--control-text);
             text-decoration: underline;
         }
+
         #theme-demo button:active {
             background: var(--ilw-color--control-accent);
             color: var(--ilw-color--control-accent-text);
@@ -270,76 +275,10 @@
             background: var(--ilw-color--focus--background);
             color: var(--ilw-color--focus--text);
         }
+
         #theme-demo button:focus-visible {
             background: var(--ilw-color--focus--background);
             color: var(--ilw-color--focus--text);
-        }
-    </style>
-    <style id="group-themes">
-        [theme="blue"] {
-            --ilw-color--background: var(--ilw-color--blue--background);
-            --ilw-color--text: var(--ilw-color--blue--text);
-            --ilw-color--link: var(--ilw-color--blue--link);
-            --ilw-color--link-hover: var(--ilw-color--blue--link-hover);
-            --ilw-color--heading: var(--ilw-color--blue--heading);
-            --ilw-color--heading-link: var(--ilw-color--blue--heading-link);
-            --ilw-color--heading-link-hover: var(--ilw-color--blue--heading-link-hover);
-            --ilw-color--control: var(--ilw-color--blue--control);
-            --ilw-color--control-text: var(--ilw-color--blue--control-text);
-            --ilw-color--control-accent: var(--ilw-color--blue--control-accent);
-            --ilw-color--control-accent-text: var(--ilw-color--blue--control-accent-text);
-        }
-        [theme="gray"] {
-            --ilw-color--background: var(--ilw-color--gray--background);
-            --ilw-color--text: var(--ilw-color--gray--text);
-            --ilw-color--link: var(--ilw-color--gray--link);
-            --ilw-color--link-hover: var(--ilw-color--gray--link-hover);
-            --ilw-color--heading: var(--ilw-color--gray--heading);
-            --ilw-color--heading-link: var(--ilw-color--gray--heading-link);
-            --ilw-color--heading-link-hover: var(--ilw-color--gray--heading-link-hover);
-            --ilw-color--control: var(--ilw-color--gray--control);
-            --ilw-color--control-text: var(--ilw-color--gray--control-text);
-            --ilw-color--control-accent: var(--ilw-color--gray--control-accent);
-            --ilw-color--control-accent-text: var(--ilw-color--gray--control-accent-text);
-        }
-        [theme="blue-gradient"] {
-            --ilw-color--background: var(--ilw-color--bluegrad--background);
-            --ilw-color--text: var(--ilw-color--bluegrad--text);
-            --ilw-color--link: var(--ilw-color--bluegrad--link);
-            --ilw-color--link-hover: var(--ilw-color--bluegrad--link-hover);
-            --ilw-color--heading: var(--ilw-color--bluegrad--heading);
-            --ilw-color--heading-link: var(--ilw-color--bluegrad--heading-link);
-            --ilw-color--heading-link-hover: var(--ilw-color--bluegrad--heading-link-hover);
-            --ilw-color--control: var(--ilw-color--bluegrad--control);
-            --ilw-color--control-text: var(--ilw-color--bluegrad--control-text);
-            --ilw-color--control-accent: var(--ilw-color--bluegrad--control-accent);
-            --ilw-color--control-accent-text: var(--ilw-color--bluegrad--control-accent-text);
-        }
-        [theme="orange"] {
-            --ilw-color--background: var(--ilw-color--orange--background);
-            --ilw-color--text: var(--ilw-color--orange--text);
-            --ilw-color--link: var(--ilw-color--orange--link);
-            --ilw-color--link-hover: var(--ilw-color--orange--link-hover);
-            --ilw-color--heading: var(--ilw-color--orange--heading);
-            --ilw-color--heading-link: var(--ilw-color--orange--heading-link);
-            --ilw-color--heading-link-hover: var(--ilw-color--orange--heading-link-hover);
-            --ilw-color--control: var(--ilw-color--orange--control);
-            --ilw-color--control-text: var(--ilw-color--orange--control-text);
-            --ilw-color--control-accent: var(--ilw-color--orange--control-accent);
-            --ilw-color--control-accent-text: var(--ilw-color--orange--control-accent-text);
-        }
-        [theme="orange-gradient"] {
-            --ilw-color--background: var(--ilw-color--orangegrad--background);
-            --ilw-color--text: var(--ilw-color--orangegrad--text);
-            --ilw-color--link: var(--ilw-color--orangegrad--link);
-            --ilw-color--link-hover: var(--ilw-color--orangegrad--link-hover);
-            --ilw-color--heading: var(--ilw-color--orangegrad--heading);
-            --ilw-color--heading-link: var(--ilw-color--orangegrad--heading-link);
-            --ilw-color--heading-link-hover: var(--ilw-color--orangegrad--heading-link-hover);
-            --ilw-color--control: var(--ilw-color--orangegrad--control);
-            --ilw-color--control-text: var(--ilw-color--orangegrad--control-text);
-            --ilw-color--control-accent: var(--ilw-color--orangegrad--control-accent);
-            --ilw-color--control-accent-text: var(--ilw-color--orangegrad--control-accent-text);
         }
     </style>
 </head>
@@ -388,11 +327,13 @@
     </p>
     <h3>Using Groups As Themes</h3>
     <p>
-        The variables are automatically set to override the defaults based on <span class="naming-box">theme="group"</span> attribute
+        The variables are automatically set to override the defaults based on <span
+            class="naming-box">theme="group"</span> attribute
         on components.
     </p>
     <p>
-        For example, <span class="naming-box">--ilw-color--background</span> will be set to <span class="naming-box">var(--ilw-color--blue--background)</span> when
+        For example, <span class="naming-box">--ilw-color--background</span> will be set to <span class="naming-box">var(--ilw-color--blue--background)</span>
+        when
         <span class="naming-box">theme="blue"</span> is set on a component.
     </p>
     <div id="theme-demo-container">
@@ -426,19 +367,23 @@
     // Semantic color definitions as JSON, grouped by theme
     const semanticColorGroups = [
         {
-            group: 'Default',
+            group: 'White',
+            theme: 'white',
             colors: [
-                {name: '--ilw-color--background', value: '#ffffff'},
-                {name: '--ilw-color--text', value: 'var(--il-storm-10)'},
-                {name: '--ilw-color--link', value: 'var(--il-industrial)'},
-                {name: '--ilw-color--link-hover', value: 'var(--il-altgeld)'},
-                {name: '--ilw-color--heading', value: 'var(--il-blue)'},
-                {name: '--ilw-color--heading-link', value: 'var(--il-blue)'},
-                {name: '--ilw-color--heading-link-hover', value: 'var(--il-altgeld)'},
-                {name: '--ilw-color--control', value: '#ffffff'},
-                {name: '--ilw-color--control-text', value: 'var(--il-blue)'},
-                {name: '--ilw-color--control-accent', value: 'var(--il-orange)'},
-                {name: '--ilw-color--control-accent-text', value: '#ffffff'},
+                {name: '--ilw-color--white--background', value: '#ffffff'},
+                {name: '--ilw-color--white--text', value: 'var(--il-storm-10)'},
+                {name: '--ilw-color--white--border', value: 'var(--il-storm)'},
+                {name: '--ilw-color--white--border-light', value: 'var(--il-storm-80)'},
+                {name: '--ilw-color--white--link', value: 'var(--il-industrial)'},
+                {name: '--ilw-color--white--link-hover', value: 'var(--il-altgeld)'},
+                {name: '--ilw-color--white--heading', value: 'var(--il-blue)'},
+                {name: '--ilw-color--white--heading-link', value: 'var(--il-blue)'},
+                {name: '--ilw-color--white--heading-link-hover', value: 'var(--il-altgeld)'},
+                {name: '--ilw-color--white--control', value: '#ffffff'},
+                {name: '--ilw-color--white--control-text', value: 'var(--il-blue)'},
+                {name: '--ilw-color--white--control-accent', value: 'var(--il-orange)'},
+                {name: '--ilw-color--white--control-accent2', value: 'var(--il-orange)'},
+                {name: '--ilw-color--white--control-accent-text', value: '#ffffff'},
             ]
         },
         {
@@ -451,9 +396,12 @@
         },
         {
             group: 'Blue',
+            theme: 'blue',
             colors: [
                 {name: '--ilw-color--blue--background', value: 'var(--il-blue)'},
                 {name: '--ilw-color--blue--text', value: '#ffffff'},
+                {name: '--ilw-color--blue--border', value: 'var(--il-storm)'},
+                {name: '--ilw-color--blue--border-light', value: 'var(--il-storm-80)'},
                 {name: '--ilw-color--blue--link', value: '#ffffff'},
                 {name: '--ilw-color--blue--link-hover', value: 'var(--il-orange)'},
                 {name: '--ilw-color--blue--heading', value: '#ffffff'},
@@ -467,9 +415,12 @@
         },
         {
             group: 'Gray',
+            theme: 'gray',
             colors: [
                 {name: '--ilw-color--gray--background', value: 'var(--il-storm-95)'},
                 {name: '--ilw-color--gray--text', value: 'var(--il-storm-10)'},
+                {name: '--ilw-color--gray--border', value: 'var(--il-storm)'},
+                {name: '--ilw-color--gray--border-light', value: 'var(--il-storm-80)'},
                 {name: '--ilw-color--gray--link', value: 'var(--il-industrial)'},
                 {name: '--ilw-color--gray--link-hover', value: 'var(--il-altgeld)'},
                 {name: '--ilw-color--gray--heading', value: 'var(--il-blue)'},
@@ -482,13 +433,16 @@
             ]
         },
         {
-            group: 'Blue Gradient',
+            group: 'Bluegrad',
+            theme: 'blue-gradient',
             colors: [
                 {
                     name: '--ilw-color--bluegrad--background',
                     value: ' linear-gradient(135deg, #1D58A7 0%, #13294B 100%)'
                 },
                 {name: '--ilw-color--bluegrad--text', value: '#ffffff'},
+                {name: '--ilw-color--bluegrad--border', value: 'var(--il-storm)'},
+                {name: '--ilw-color--bluegrad--border-light', value: 'var(--il-storm-80)'},
                 {name: '--ilw-color--bluegrad--link', value: '#ffffff'},
                 {name: '--ilw-color--bluegrad--link-hover', value: 'var(--il-arches-90)'},
                 {name: '--ilw-color--bluegrad--heading', value: '#ffffff'},
@@ -502,9 +456,12 @@
         },
         {
             group: 'Orange',
+            theme: 'orange',
             colors: [
                 {name: '--ilw-color--orange--background', value: 'var(--il-orange)'},
                 {name: '--ilw-color--orange--text', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orange--border', value: 'var(--il-storm)'},
+                {name: '--ilw-color--orange--border-light', value: 'var(--il-storm-80)'},
                 {name: '--ilw-color--orange--link', value: 'var(--il-blue)'},
                 {name: '--ilw-color--orange--link-hover', value: '#000000'},
                 {name: '--ilw-color--orange--heading', value: '#ffffff'},
@@ -517,13 +474,16 @@
             ]
         },
         {
-            group: 'Orange Gradient',
+            group: 'Orangegrad',
+            theme: 'orange-gradient',
             colors: [
                 {
                     name: '--ilw-color--orangegrad--background',
                     value: 'linear-gradient(135deg, #FCB316 0%, #FD890E 18.89%, #FF5F05 80.81%)'
                 },
                 {name: '--ilw-color--orangegrad--text', value: 'var(--il-blue)'},
+                {name: '--ilw-color--orangegrad--border', value: 'var(--il-storm)'},
+                {name: '--ilw-color--orangegrad--border-light', value: 'var(--il-storm-80)'},
                 {name: '--ilw-color--orangegrad--link', value: 'var(--il-blue)'},
                 {name: '--ilw-color--orangegrad--link-hover', value: '#000000'},
                 {name: '--ilw-color--orangegrad--heading', value: 'var(--il-blue)'},
@@ -537,12 +497,27 @@
         },
     ];
 
+    let defaultGroup = {
+        group: "Default",
+        theme: '',
+        colors: [
+        ]
+    };
     // Dynamically generate semantic color CSS variables
     let semanticCSS = ':root {\n';
     semanticColorGroups.forEach(group => {
-        group.colors.forEach(c => {
+        for (let c of group.colors) {
             semanticCSS += `  ${c.name}: ${c.value};\n`;
-        });
+        };
+        semanticCSS += '\n';
+        if (group.theme === 'white') {
+            for (let c of group.colors) {
+                const basename = c.name.replace("--white", "");
+                semanticCSS += `  ${basename}: var(${c.name});\n`;
+                defaultGroup.colors.push({name: basename, value: `var(${c.name})`});
+            }
+            semanticCSS += '\n';
+        }
     });
     semanticCSS += '}';
     const style = document.createElement('style');
@@ -550,17 +525,35 @@
     style.textContent = semanticCSS;
     document.head.appendChild(style);
 
+    // Generate CSS for theme attributes
+    let groupThemesCSS = '';
+    for (let group of semanticColorGroups) {
+        if (group.group === 'Focus') continue;
+
+        let themeAttr = group.group.toLowerCase();
+        let themeName = group.theme;
+        groupThemesCSS += `[theme="${themeName}"] {\n`;
+        for (let c of group.colors) {
+            groupThemesCSS += `  ${c.name.replace(`--${themeAttr}`, "")}: var(${c.name});\n`;
+        }
+        groupThemesCSS += '}\n';
+    }
+    const groupThemesStyle = document.createElement('style');
+    groupThemesStyle.id = 'group-themes';
+    groupThemesStyle.textContent = groupThemesCSS;
+    document.head.appendChild(groupThemesStyle);
+
     // Render semantic color swatches grouped by theme
     const container = document.getElementById('semantic-colors');
-    semanticColorGroups.forEach(group => {
+    for (let group of [defaultGroup, ...semanticColorGroups]) {
         const groupDiv = document.createElement('div');
         const groupTitle = document.createElement('h3');
         groupTitle.textContent = group.group;
         groupDiv.appendChild(groupTitle);
-        // Use ul/li for accessibility
+
         const swatchList = document.createElement('ul');
         swatchList.className = 'semantic-list';
-        group.colors.forEach(c => {
+        for (let c of group.colors) {
             const li = document.createElement('li');
             li.className = 'semantic-sample-row';
             // Use ilw-tooltip for clipboard notice
@@ -588,10 +581,10 @@
                 }
             });
             swatchList.appendChild(li);
-        });
+        }
         groupDiv.appendChild(swatchList);
         container.appendChild(groupDiv);
-    });
+    }
 
     // Illinois Color Palette as JSON
     const illinoisPalette = [
@@ -627,10 +620,10 @@
         {name: '--il-earth', value: '#7D3E13', text: '#fff'}
     ];
 
-    // Render Illinois Color Palette dynamically
+    // Render Illinois Color Palette
     const paletteList = document.querySelector('.palette-list');
     paletteList.innerHTML = '';
-    illinoisPalette.forEach(color => {
+    for (let color of illinoisPalette) {
         const row = document.createElement('div');
         row.className = 'palette-sample-row';
         row.innerHTML = `
@@ -638,18 +631,18 @@
         <div class="palette-name">${color.value}</div>
       `;
         paletteList.appendChild(row);
-    });
+    }
 
     // Theme demo functionality
     const themeDemo = document.getElementById('theme-demo');
     const themeRadios = document.querySelectorAll('input[name="theme-group"]');
 
-    themeRadios.forEach(radio => {
+    for (let radio of themeRadios) {
         radio.addEventListener('change', function () {
             const theme = this.value;
             themeDemo.setAttribute('theme', theme);
         });
-    });
+    }
 </script>
 </body>
 </html>
